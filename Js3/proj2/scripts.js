@@ -12,4 +12,16 @@ const getBGColor = (selectedElement) => {
     return window.getComputedStyle(selectedElement).backgroundColor;
 }
 
-console.log(getBGColor(orange));
+const ColorChanger = (element, Color) => {
+    return element.addEventListener("mouseenter", () => {
+        center.style.background = Color;
+    });
+};
+
+ColorChanger(red, getBGColor(red));
+ColorChanger(cyan, getBGColor(cyan));
+ColorChanger(violet, getBGColor(violet));
+ColorChanger(orange, getBGColor(orange));
+ColorChanger(pink, getBGColor(pink));
+
+
