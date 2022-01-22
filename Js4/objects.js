@@ -12,7 +12,10 @@ User.prototype.getFirstname = function() {
 
 var xyz = new User("xyz", 2)
 xyz.getCourseCount();
-xyz.getFirstname();
+
+if (xyz.hasOwnProperty("firstName")) {
+    xyz.getFirstname();
+}
 
 
 var sam = new User("Sam", 1);
