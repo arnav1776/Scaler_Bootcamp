@@ -13,6 +13,23 @@ class User {
     }
     getCourseList() {
         return this.#courseList;
+    } 
+
+    login(){
+        return "You are logged in";
+    }
+}
+
+class SubAdmin extends User{
+    constructor(name, email){
+        super(name, email);
+
+    }
+    getAdminInfo(){
+        return "SubAdmin";
+    }
+    login(){
+        return "login for admin only"
     }
 }
 
@@ -23,3 +40,8 @@ console.log(sam.getInfo());
 sam.enrollCourse("Angular Bootcamp");
 console.log(sam.getCourseList());
 console.log(sam.courseList);
+
+const tom = new SubAdmin("tom", "tom@gmail.com");
+console.log(tom.getAdminInfo());
+console.log(tom.login());
+console.log(tom.getInfo());
