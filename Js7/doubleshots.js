@@ -1,4 +1,11 @@
-const google = "googgle";
+const x = true; 
+const a = !x; 
+const b = !a; 
+
+!!true // Evaluates to true.
+!!false // Evaluates to false.
+
+const google = "google";
 const fb = null;
 
 if (google) {
@@ -8,3 +15,4 @@ if (google) {
 if (!!fb) {
     console.log("Block 2");
 }
+
